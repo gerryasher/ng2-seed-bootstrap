@@ -1,21 +1,19 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import { Component } from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
-import {AlbumsComponent} from './albums.component';
-import {AlbumComponent} from './album.component';
-import {ContactComponent} from './contact.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
-@RouteConfig ([
-    { path: '/albums', name: 'Albums', component: AlbumsComponent, useAsDefault: true },
-    { path: '/albums/:id', name: 'Album', component: AlbumComponent },
-    { path: '/contact', name: 'Contact', component: ContactComponent },
-    { path: '/*other', name: 'Other', redirectTo: ['Albums'] }
-])
+
+// additional imports
 
 @Component({
-    selector: 'my-app',
-    templateUrl: '/app/app.component.html',
-    directives: [ROUTER_DIRECTIVES]
+    selector: 'gasher-app',
+    templateUrl: './app/app.component.html',
+    directives: [ROUTER_DIRECTIVES],
+    providers: []
 })
 export class AppComponent {
+    
 }
